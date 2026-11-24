@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Алина — веб-дизайнер. Коллекционное портфолио в стиле Vogue: проекты, стек, контакты.">
+<title>ALINA — Vogue Edition · Веб-дизайнер</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<!-- Индикатор чтения номера -->
+<div class="progress" aria-hidden="true"></div>
+
+<!-- Кастомный журнальный курсор -->
+<div class="cursor" aria-hidden="true"><span class="cursor__text"></span></div>
+
+<!-- Колонтитул внизу экрана -->
+<div class="folio" aria-hidden="true">
+  <b id="pg">СТР. 01</b>
+</div>
+
+<!-- Текстура журнальной бумаги -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- НАВИГАЦИЯ -->
+<header class="nav">
+  <nav class="menu" aria-label="Основная навигация">
+    <a href="#work">Достижения</a>
+    <a href="#tech">Стек</a>
+    <a href="#contact">Контакт</a>
+  </nav>
+
+  <a href="#top" class="brand" aria-label="Алина — наверх">
+    <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="24" cy="24" r="18.6" fill="none" stroke="currentColor" stroke-width=".6" opacity=".55"/>
+      <text x="24" y="33.6" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-weight="700" font-size="29" fill="currentColor">А</text>
+      <circle class="brand__dot" cx="39.9" cy="8.1" r="3.4"/>
+    </svg>
+  </a>
+
+  <a href="https://t.me/Alinkktix" target="_blank" rel="noopener noreferrer" class="nav__cta" data-cursor="WRITE">
+    Написать
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M7 17L17 7M17 7H8M17 7V16"/>
+    </svg>
+  </a>
+</header>
+
+<main id="top">
+
+<!-- =========================================================
+     01. HERO: ОБЛОЖКА ГЛЯНЦЕВОГО ЖУРНАЛА
+     ========================================================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__main">
+    <div class="hero__vogue-logo" aria-hidden="true">
+      <span>А</span><span>Л</span><span>И</span><span>Н</span><span>А</span>
+    </div>
+
+    <ul class="hero__facts">
+      <li><b>Figma</b><span>выразительные макеты</span></li>
+      <li><b>HTML + CSS</b><span>вёрстка вручную</span></li>
+      <li><b>Адаптив</b><span>чистый семантический код</span></li>
+    </ul>
+
+    <div class="hero__body">
+      <h1 class="hero__title" id="hero-title">
+        <span class="hero__line"><span>Веб-</span></span>
+        <span class="hero__line"><span><em>дизайнер</em></span></span>
+      </h1>
+      <div class="hero__copy">
+      <p class="hero__lead">
+        Привет, я Алина. Учусь на 3 курсе, проектирую выразительные макеты в Figma
+        и верстаю их вручную — с журнальной точностью к типографике, сетке и деталям.
+      </p>
+      <div class="hero__actions">
+        <a href="https://t.me/Alinkktix" target="_blank" rel="noopener noreferrer" class="btn" data-cursor="WRITE">
+          Обсудить проект
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      </div>
+    </div>
+
+    <div class="hero__foot">
+      <span>Открыта к стажировке и проектам</span>
+      <span>Листайте ↓</span>
+    </div>
+  </div>
+
+  <figure class="hero__cover" id="heroCover" data-cursor="COLOR">
+
+    <img class="hero__img-bw" src="alina.jpg" alt="Портрет Алины" onerror="this.closest('.hero__cover').classList.add('no-photo')">
+    <img class="hero__img-color" src="alina.jpg" alt="" aria-hidden="true">
+
+  </figure>
+</section>
+
+<!-- =========================================================
+     03. ЦИТАТА РЕДАКТОРА (PULL QUOTE)
+     ========================================================= -->
+
+<!-- =========================================================
+     04. ДОСТИЖЕНИЯ (EDITORIAL SPREAD)
+     ========================================================= -->
+<section class="work reveal-section" id="work">
+  <div class="work__inner">
+    <div class="work__head">
+      <div>
+        <h2 class="section-title reveal-text">Мои<br>достижения</h2>
+      </div>
+      <p class="work__sub">Три ключевых этапа, из которых складывается мой профессиональный почерк.</p>
+    </div>
+
+    <div class="work__list">
+
+      <article class="achv reveal-item" data-cursor="OPEN">
+        <div class="achv__top"><span>АРТИКЛЬ № 01</span><span>УЧЁБА</span></div>
+        <div class="achv__media">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M32 12 5 25l27 13 27-13-27-13z"/>
+            <path d="M15 31v13c0 4 8 8 17 8s17-4 17-8V31"/>
+            <path d="M59 25v18"/>
+          </svg>
+          <img src="achievement-1.jpg" alt="Успешная учёба" loading="lazy" decoding="async" onerror="this.remove()">
+        </div>
+        <div class="achv__body">
+          <h3>Успешная учёба</h3>
+          <p>Высокие оценки на 3 курсе по профильным и дизайнерским дисциплинам.</p>
+          <div class="achv__tags"><span>учёба</span><span>дизайн</span></div>
+          <button class="achv__btn" type="button" aria-expanded="false" aria-controls="more-1">
+            <span>Читать колонку</span><i aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="achv__more" id="more-1">
+          <div>
+            <ul>
+              <li>Профильные дисциплины</li>
+              <li>Дизайнерские дисциплины</li>
+              <li>Третий курс университета</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="achv reveal-item" data-cursor="OPEN">
+        <div class="achv__top"><span>АРТИКЛЬ № 02</span><span>КОД</span></div>
+        <div class="achv__media">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 20 10 32l12 12M42 20l12 12-12 12M37 14 27 50"/>
+          </svg>
+          <img src="achievement-2.jpg" alt="Освоение стека" loading="lazy" decoding="async" onerror="this.remove()">
+        </div>
+        <div class="achv__body">
+          <h3>Освоение стека</h3>
+          <p>Самостоятельно изучила HTML, CSS и основы адаптивной вёрстки.</p>
+          <div class="achv__tags"><span>HTML</span><span>CSS</span><span>адаптив</span></div>
+          <button class="achv__btn" type="button" aria-expanded="false" aria-controls="more-2">
+            <span>Читать колонку</span><i aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="achv__more" id="more-2">
+          <div>
+            <ul>
+              <li>HTML: аккуратная смысловая разметка</li>
+              <li>CSS: Flexbox, Grid и медиазапросы</li>
+              <li>Проверка вёрстки на телефоне</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="achv reveal-item" data-cursor="OPEN">
+        <div class="achv__top"><span>АРТИКЛЬ № 03</span><span>ПРАКТИКА</span></div>
+        <div class="achv__media">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="8" y="10" width="48" height="44"/>
+            <path d="M8 22h48M24 22v32M32 32h16M32 40h10"/>
+          </svg>
+          <img src="achievement-3.jpg" alt="Учебные проекты" loading="lazy" decoding="async" onerror="this.remove()">
+        </div>
+        <div class="achv__body">
+          <h3>Учебные проекты</h3>
+          <p>5+ макетов: от концепции и прототипа до чистого валидного кода.</p>
+          <div class="achv__tags"><span>Figma</span><span>вёрстка</span><span>UI</span></div>
+          <button class="achv__btn" type="button" aria-expanded="false" aria-controls="more-3">
+            <span>Читать колонку</span><i aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="achv__more" id="more-3">
+          <div>
+            <ul>
+              <li>Концепция и референсы</li>
+              <li>Макет и прототип в Figma</li>
+              <li>Вёрстка вручную, без конструкторов</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     05. ТЕХНОЛОГИИ (ИНТЕРАКТИВНЫЕ ОБЛОЖКИ-РАЗВОРОТЫ)
+     ========================================================= -->
+<section class="tech reveal-section" id="tech">
+  <div class="tech__inner">
+    <div class="tech__head">
+      <div>
+        <h2 class="section-title reveal-text">Технологии,<br>которыми <em>я владею</em></h2>
+      </div>
+      <p class="tech__lead">Нажмите на любую обложку, чтобы перелистнуть страницу и заглянуть внутрь рубрики.</p>
+    </div>
+
+    <div class="tech__grid">
+      <!-- 01 HTML -->
+      <article class="tech-card tech-card--ink" style="--fs:24cqw" data-cursor="FLIP">
+        <div class="tech-card__cover">
+          <div class="tech-card__top"><span>Выпуск № 01</span><span>01 / 06</span></div>
+          <h3 class="tech-card__mast" aria-label="HTML"><span>H</span><span>T</span><span>M</span><span>L</span></h3>
+          <div class="tech-card__media tech-card__media--photo">
+            <img class="tech-card__art" src="code.png" alt="Code: clean code — big possibilities" loading="lazy" decoding="async">
+            <div class="tech-card__stamp"><b>4/5</b><small>уровень</small></div>
+          </div>
+          <div class="tech-card__body">
+            <span class="tech-card__kicker">Рубрика — Разметка</span>
+            <p class="tech-card__line">Смысл в каждом теге</p>
+            <p>Пишу чистую смысловую разметку: правильные теги, структура и доступность — основа любой страницы.</p>
+          </div>
+          <div class="tech-card__bottom">
+            <i class="tech-card__code" aria-hidden="true"></i>
+            <button class="tech-card__btn tech-card__open" type="button" aria-expanded="false">Открыть <span>→</span></button>
+          </div>
+        </div>
+        <div class="tech-card__page">
+          <div class="tech-card__top"><span>Внутри номера</span><span>Стр. 01</span></div>
+          <span class="tech-card__kicker">Рубрика — Разметка</span>
+          <h4 class="tech-card__ptitle">HTML</h4>
+          <ul class="tech-card__list">
+            <li>Смысловая структура страницы</li>
+            <li>Доступность: alt и aria-атрибуты</li>
+            <li>Аккуратный валидный код</li>
+          </ul>
+          <div class="tech-card__tags"><span>HTML5</span><span>семантика</span></div>
+          <div class="tech-card__bottom">
+            <button class="tech-card__btn tech-card__close" type="button"><span>←</span> На обложку</button>
+            <i class="tech-card__code" aria-hidden="true"></i>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 CSS -->
+      <article class="tech-card tech-card--red" style="--fs:26cqw" data-cursor="FLIP">
+        <div class="tech-card__cover">
+          <div class="tech-card__top"><span>Выпуск № 01</span><span>02 / 06</span></div>
+          <h3 class="tech-card__mast" aria-label="CSS"><span>C</span><span>S</span><span>S</span></h3>
+          <div class="tech-card__media tech-card__media--photo">
+            <img class="tech-card__art" src="typography.png" alt="Typography makes a difference" loading="lazy" decoding="async">
+            <div class="tech-card__stamp"><b>4/5</b><small>уровень</small></div>
+          </div>
+          <div class="tech-card__body">
+            <span class="tech-card__kicker">Рубрика — Стиль</span>
+            <p class="tech-card__line">Стиль без лишних пикселей</p>
+            <p>Flexbox, Grid, переменные и плавные переходы. Вёрстка вручную, без конструкторов.</p>
+          </div>
+          <div class="tech-card__bottom">
+            <i class="tech-card__code" aria-hidden="true"></i>
+            <button class="tech-card__btn tech-card__open" type="button" aria-expanded="false">Открыть <span>→</span></button>
+          </div>
+        </div>
+        <div class="tech-card__page">
+          <div class="tech-card__top"><span>Внутри номера</span><span>Стр. 02</span></div>
+          <span class="tech-card__kicker">Рубрика — Стиль</span>
+          <h4 class="tech-card__ptitle">CSS</h4>
+          <ul class="tech-card__list">
+            <li>Flexbox и Grid для макета</li>
+            <li>Переменные и clamp() для масштаба</li>
+            <li>Переходы и @keyframes-анимации</li>
+            <li>Псевдоэлементы и состояния :hover</li>
+          </ul>
+          <div class="tech-card__tags"><span>Flexbox</span><span>Grid</span><span>анимации</span></div>
+          <div class="tech-card__bottom">
+            <button class="tech-card__btn tech-card__close" type="button"><span>←</span> На обложку</button>
+            <i class="tech-card__code" aria-hidden="true"></i>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 FIGMA -->
+      <article class="tech-card tech-card--paper" style="--fs:22cqw" data-cursor="FLIP">
+        <div class="tech-card__cover">
+          <div class="tech-card__top"><span>Выпуск № 01</span><span>03 / 06</span></div>
+          <h3 class="tech-card__mast" aria-label="Figma"><span>F</span><span>I</span><span>G</span><span>M</span><span>A</span></h3>
+          <div class="tech-card__media tech-card__media--photo">
+            <img class="tech-card__art" src="technologies.png" alt="Technologies: Figma, HTML, CSS, JavaScript" loading="lazy" decoding="async">
+            <div class="tech-card__stamp"><b>4/5</b><small>уровень</small></div>
+          </div>
+          <div class="tech-card__body">
+            <span class="tech-card__kicker">Рубрика — Дизайн</span>
+            <p class="tech-card__line">От идеи до макета</p>
+            <p>Собираю макеты и прототипы: сетки, цвет и типографика — каждый элемент на своём месте.</p>
+          </div>
+          <div class="tech-card__bottom">
+            <i class="tech-card__code" aria-hidden="true"></i>
+            <button class="tech-card__btn tech-card__open" type="button" aria-expanded="false">Открыть <span>→</span></button>
+          </div>
+        </div>
+        <div class="tech-card__page">
+          <div class="tech-card__top"><span>Внутри номера</span><span>Стр. 03</span></div>
+          <span class="tech-card__kicker">Рубрика — Дизайн</span>
+          <h4 class="tech-card__ptitle">Figma</h4>
+          <ul class="tech-card__list">
+            <li>Макеты экранов для сайта</li>
+            <li>Прототип до начала вёрстки</li>
+            <li>Сетки, цвета и шрифты в одном стиле</li>
+          </ul>
+          <div class="tech-card__tags"><span>макеты</span><span>прототипы</span><span>UI</span></div>
+          <div class="tech-card__bottom">
+            <button class="tech-card__btn tech-card__close" type="button"><span>←</span> На обложку</button>
+            <i class="tech-card__code" aria-hidden="true"></i>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 АДАПТИВ -->
+      <article class="tech-card tech-card--paper" style="--fs:15cqw" data-cursor="FLIP">
+        <div class="tech-card__cover">
+          <div class="tech-card__top"><span>Выпуск № 01</span><span>04 / 06</span></div>
+          <h3 class="tech-card__mast" aria-label="Адаптивная вёрстка"><span>А</span><span>Д</span><span>А</span><span>П</span><span>Т</span><span>И</span><span>В</span></h3>
+          <div class="tech-card__media tech-card__media--photo">
+            <img class="tech-card__art" src="adaptive_design.png" alt="Adaptive design for any device" loading="lazy" decoding="async">
+            <div class="tech-card__stamp"><b>4/5</b><small>уровень</small></div>
+          </div>
+          <div class="tech-card__body">
+            <span class="tech-card__kicker">Рубрика — Вёрстка</span>
+            <p class="tech-card__line">Красиво на любом экране</p>
+            <p>Гибкие сетки и медиазапросы: сайт одинаково аккуратен на телефоне, планшете и ноутбуке.</p>
+          </div>
+          <div class="tech-card__bottom">
+            <i class="tech-card__code" aria-hidden="true"></i>
+            <button class="tech-card__btn tech-card__open" type="button" aria-expanded="false">Открыть <span>→</span></button>
+          </div>
+        </div>
+        <div class="tech-card__page">
+          <div class="tech-card__top"><span>Внутри номера</span><span>Стр. 04</span></div>
+          <span class="tech-card__kicker">Рубрика — Вёрстка</span>
+          <h4 class="tech-card__ptitle">Адаптивная вёрстка</h4>
+          <ul class="tech-card__list">
+            <li>Медиазапросы под телефон и планшет</li>
+            <li>Гибкие сетки на Grid и Flexbox</li>
+            <li>Проверка вёрстки на телефоне</li>
+          </ul>
+          <div class="tech-card__tags"><span>@media</span><span>адаптив</span><span>mobile</span></div>
+          <div class="tech-card__bottom">
+            <button class="tech-card__btn tech-card__close" type="button"><span>←</span> На обложку</button>
+            <i class="tech-card__code" aria-hidden="true"></i>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 UI/UX -->
+      <article class="tech-card tech-card--ink" style="--fs:22cqw" data-cursor="FLIP">
+        <div class="tech-card__cover">
+          <div class="tech-card__top"><span>Выпуск № 01</span><span>05 / 06</span></div>
+          <h3 class="tech-card__mast" aria-label="Типографика и UI/UX"><span>U</span><span>I</span><span>/</span><span>U</span><span>X</span></h3>
+          <div class="tech-card__media tech-card__media--photo">
+            <img class="tech-card__art" src="ui_ux.png" alt="UI/UX: for people, by people" loading="lazy" decoding="async">
+            <div class="tech-card__stamp"><b>3/5</b><small>уровень</small></div>
+          </div>
+          <div class="tech-card__body">
+            <span class="tech-card__kicker">Рубрика — Эстетика</span>
+            <p class="tech-card__line">Шрифты, ритм, удобство</p>
+            <p>Подбираю шрифтовые пары, ритм и отступы и думаю о том, как человеку удобно пользоваться сайтом.</p>
+          </div>
+          <div class="tech-card__bottom">
+            <i class="tech-card__code" aria-hidden="true"></i>
+            <button class="tech-card__btn tech-card__open" type="button" aria-expanded="false">Открыть <span>→</span></button>
+          </div>
+        </div>
+        <div class="tech-card__page">
+          <div class="tech-card__top"><span>Внутри номера</span><span>Стр. 05</span></div>
+          <span class="tech-card__kicker">Рубрика — Эстетика</span>
+          <h4 class="tech-card__ptitle">Типографика и UI/UX</h4>
+          <ul class="tech-card__list">
+            <li>Подбор шрифтовых пар</li>
+            <li>Ритм, интервалы и отступы</li>
+            <li>Контраст и иерархия на странице</li>
+            <li>Удобный путь пользователя</li>
+          </ul>
+          <div class="tech-card__tags"><span>шрифты</span><span>UI</span><span>UX</span></div>
+          <div class="tech-card__bottom">
+            <button class="tech-card__btn tech-card__close" type="button"><span>←</span> На обложку</button>
+            <i class="tech-card__code" aria-hidden="true"></i>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06 GIT -->
+      <article class="tech-card tech-card--red" style="--fs:26cqw" data-cursor="FLIP">
+        <div class="tech-card__cover">
+          <div class="tech-card__top"><span>Выпуск № 01</span><span>06 / 06</span></div>
+          <h3 class="tech-card__mast" aria-label="Git и GitHub Pages"><span>G</span><span>I</span><span>T</span></h3>
+          <div class="tech-card__media tech-card__media--photo">
+            <img class="tech-card__art" src="design_process.png" alt="Design process: from idea to result" loading="lazy" decoding="async">
+            <div class="tech-card__stamp"><b>3/5</b><small>уровень</small></div>
+          </div>
+          <div class="tech-card__body">
+            <span class="tech-card__kicker">Рубрика — Публикация</span>
+            <p class="tech-card__line">От репозитория до ссылки</p>
+            <p>Храню проекты в репозитории и публикую готовые сайты на GitHub Pages.</p>
+          </div>
+          <div class="tech-card__bottom">
+            <i class="tech-card__code" aria-hidden="true"></i>
+            <button class="tech-card__btn tech-card__open" type="button" aria-expanded="false">Открыть <span>→</span></button>
+          </div>
+        </div>
+        <div class="tech-card__page">
+          <div class="tech-card__top"><span>Внутри номера</span><span>Стр. 06</span></div>
+          <span class="tech-card__kicker">Рубрика — Публикация</span>
+          <h4 class="tech-card__ptitle">Git и GitHub Pages</h4>
+          <ul class="tech-card__list">
+            <li>Репозиторий для каждого проекта</li>
+            <li>Коммиты с понятными сообщениями</li>
+            <li>Публикация на GitHub Pages</li>
+          </ul>
+          <div class="tech-card__tags"><span>Git</span><span>GitHub</span><span>хостинг</span></div>
+          <div class="tech-card__bottom">
+            <button class="tech-card__btn tech-card__close" type="button"><span>←</span> На обложку</button>
+            <i class="tech-card__code" aria-hidden="true"></i>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     БЕГУЩАЯ СТРОКА-РАЗДЕЛИТЕЛЬ
+     ========================================================= -->
+<div class="marquee marquee--out" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Алина</span><span>✦</span><span>Дизайн</span><span>✦</span><span>Вёрстка</span><span>✦</span><span>Vogue Edition</span><span>✦</span>
+    <span>Алина</span><span>✦</span><span>Дизайн</span><span>✦</span><span>Вёрстка</span><span>✦</span><span>Vogue Edition</span><span>✦</span>
+  </div>
+</div>
+
+<!-- =========================================================
+     06. КОНТАКТЫ (ФИНАЛЬНЫЙ РАЗВОРОТ НОМЕРА)
+     ========================================================= -->
+<section class="contact reveal-section" id="contact">
+  <div class="contact__head">
+    <h2 class="section-title reveal-text">
+      Давайте<br><em>поработаем</em>
+    </h2>
+  </div>
+
+  <div class="contact__body">
+    <div class="contact__grid">
+      <a href="mailto:alinkktix27@gmail.com" class="contact__item reveal-item" data-cursor="MAIL">
+        <span class="contact__label">Почта</span>
+        <span class="contact__value">alinkktix27@gmail.com</span>
+        <span class="contact__arrow">↗</span>
+      </a>
+      <a href="https://t.me/Alinkktix" target="_blank" rel="noopener noreferrer" class="contact__item reveal-item" data-cursor="TG">
+        <span class="contact__label">Telegram</span>
+        <span class="contact__value">@Alinkktix</span>
+        <span class="contact__arrow">↗</span>
+      </a>
+      <a href="https://vk.com/a.drozdova4" target="_blank" rel="noopener noreferrer" class="contact__item reveal-item" data-cursor="VK">
+        <span class="contact__label">ВКонтакте</span>
+        <span class="contact__value">a.drozdova4</span>
+        <span class="contact__arrow">↗</span>
+      </a>
+      <a href="https://instagram.com/alinkktix_" target="_blank" rel="noopener noreferrer" class="contact__item reveal-item" data-cursor="INSTA">
+        <span class="contact__label">Instagram</span>
+        <span class="contact__value">@alinkktix_</span>
+        <span class="contact__arrow">↗</span>
+      </a>
+    </div>
+
+    <figure class="contact__pic reveal-item">
+      <img src="contact.png" alt="Contact: let’s create something great — Thank you!" loading="lazy" decoding="async">
+    </figure>
+  </div>
+
+  <div class="contact__colophon">
+    <div class="barcode" aria-hidden="true"><i></i>ISSN 2025 · № 01</div>
+    <p class="colophon__note">
+      Выпуск подготовлен и свёрстан вручную.<br>
+      <em>Все права защищены · Алина, 2025</em>
+    </p>
+  </div>
+
+  <footer class="footer">
+    <span>© 2025 Алина</span>
+    <span>Сделано вручную, с любовью к деталям</span>
+    <a href="#top" data-cursor="TOP">Наверх ↑</a>
+  </footer>
+
+  <div class="foot-mast" aria-hidden="true">АЛИНА</div>
+</section>
+
+</main>
+
+<script>
+(() => {
+  /* 1. ПРОГРЕСС-БАР И ПАРАЛЛАКС ОБЛОЖКИ */
+  const bar = document.querySelector('.progress');
+  const heroEl = document.querySelector('.hero');
+  const coverImgs = document.querySelectorAll('.hero__cover img');
+  const tickScroll = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - innerHeight || 1;
+    if (bar) bar.style.transform = `scaleX(${Math.min(scrollY / max, 1)})`;
+    if (scrollY < innerHeight) {
+      heroEl && heroEl.style.setProperty('--sy', scrollY);
+      coverImgs.forEach(img => { img.style.translate = `0 ${scrollY * 0.05}px`; });
+    }
+  };
+  addEventListener('scroll', tickScroll, { passive: true });
+  tickScroll();
+
+  /* 2. ИНТЕРАКТИВ ОБЛОЖКИ: ПРОЯВКА ЦВЕТА + 3D-НАКЛОН + КНОПКА */
+  const hero = document.querySelector('.hero');
+  const cover = document.getElementById('heroCover');
+  const toggle = document.getElementById('colorToggle');
+
+  if (cover && hero) {
+    cover.addEventListener('pointerenter', (e) => {
+      const r = cover.getBoundingClientRect();
+      const x = e.clientX - r.left;
+      const y = e.clientY - r.top;
+      hero.style.setProperty('--mx', x + 'px');
+      hero.style.setProperty('--my', (y + r.height * 0.06) + 'px'); /* фото чуть выше рамки */
+
+    });
+
+    cover.addEventListener('pointerleave', () => {
+      hero.style.setProperty('--spot', '0px');
+      cover.style.transform = '';
+    });
+  }
+
+  if (toggle && cover) {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const active = cover.classList.toggle('is-color');
+      toggle.querySelector('span').textContent = active ? 'Режим: Цвет' : 'Нажми: Цвет / ЧБ';
+    });
+  }
+
+  /* 4. НОМЕРА СТРАНИЦ В КОЛОНТИТУЛЕ + КАСТОМНЫЙ КУРСОР */
+  const pg = document.getElementById('pg');
+  const sections = [['work', '04'], ['tech', '06'], ['contact', '08']];
+  const updPage = () => {
+    let n = '01';
+    sections.forEach(([id, num]) => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top < innerHeight * 0.5) n = num;
+    });
+    if (pg && pg.textContent !== 'СТР. ' + n) pg.textContent = 'СТР. ' + n;
+  };
+  addEventListener('scroll', updPage, { passive: true });
+  updPage();
+
+  const cursor = document.querySelector('.cursor');
+  const cursorText = document.querySelector('.cursor__text');
+  if (cursor) {
+    let x = 0, y = 0, tx = 0, ty = 0;
+    addEventListener('pointermove', (e) => { tx = e.clientX; ty = e.clientY; });
+    (function loop() {
+      x += (tx - x) * 0.18;
+      y += (ty - y) * 0.18;
+      cursor.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+      requestAnimationFrame(loop);
+    })();
+
+    document.addEventListener('pointerover', (e) => {
+      const target = e.target.closest('[data-cursor], a, button');
+      if (target) {
+        cursor.classList.add('is-big');
+        const label = target.getAttribute('data-cursor') || '';
+        if (cursorText) cursorText.textContent = label;
+      } else {
+        cursor.classList.remove('is-big');
+        if (cursorText) cursorText.textContent = '';
+      }
+    });
+  }
+
+  /* 5. РАСКРЫТИЕ КОЛОНОК В ДОСТИЖЕНИЯХ */
+  document.querySelectorAll('.achv__btn').forEach((b) => {
+    b.addEventListener('click', () => {
+      const open = b.closest('.achv').classList.toggle('is-open');
+      b.setAttribute('aria-expanded', open);
+      b.firstElementChild.textContent = open ? 'Свернуть колонку' : 'Читать колонку';
+    });
+  });
+
+  /* 6. 3D-ПЕРЕЛИСТЫВАНИЕ КАРТОЧЕК ТЕХНОЛОГИЙ */
+  const cards = [...document.querySelectorAll('.tech-card')];
+  const setCard = (c, on) => {
+    c.classList.toggle('is-open', on);
+    const b = c.querySelector('.tech-card__open');
+    b.setAttribute('aria-expanded', on);
+    (on ? c.querySelector('.tech-card__close') : b).focus({ preventScroll: true });
+  };
+  cards.forEach((c) => {
+    c.querySelector('.tech-card__cover').addEventListener('click', () => {
+      cards.forEach((o) => o !== c && o.classList.contains('is-open') && setCard(o, false));
+      setCard(c, true);
+    });
+    c.querySelector('.tech-card__close').addEventListener('click', (e) => {
+      e.stopPropagation();
+      setCard(c, false);
+    });
+  });
+  addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') cards.forEach((c) => c.classList.contains('is-open') && setCard(c, false));
+  });
+
+  /* 7. ЩЕДРЫЙ SCROLL-REVEAL ДЛЯ ВСЕХ СЕКЦИЙ И КАРТОЧЕК */
+  document.documentElement.classList.add('js');
+  const revealTargets = document.querySelectorAll('.reveal-section, .reveal-item, .tech-card');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    revealTargets.forEach((el) => io.observe(el));
+  } else {
+    revealTargets.forEach((el) => el.classList.add('is-in'));
+  }
+  /* 8. ТЕКСТ ОБЛОЖКИ «ПЕЧАТАЕТСЯ» */
+  const lead = document.querySelector('.hero__lead');
+  if (lead) {
+    const full = lead.textContent.replace(/\s+/g, ' ').trim();
+    lead.innerHTML = '<span class="sr-only"></span><span aria-hidden="true"><span class="tw-done"></span><i class="tw-caret"></i><span class="tw-rest"></span></span>';
+    lead.firstChild.textContent = full;            /* полный текст для скринридеров */
+    const done = lead.querySelector('.tw-done');
+    const rest = lead.querySelector('.tw-rest');
+    const caret = lead.querySelector('.tw-caret');
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      done.textContent = full; caret.remove();
+    } else {
+      rest.textContent = full;
+      let i = 0;
+      const step = () => {
+        i++;
+        done.textContent = full.slice(0, i);
+        rest.textContent = full.slice(i);
+        if (i < full.length) setTimeout(step, 22 + Math.random() * 38);   /* скорость печати, мс на букву */
+        else setTimeout(() => caret.remove(), 1800);
+      };
+      setTimeout(step, 1000);                       /* после появления обложки */
+    }
+  }
+})();
+</script>
+</body>
+</html>
